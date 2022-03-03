@@ -4,14 +4,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class RadioTestSetCurrentStation {  //устанавливаем конкретную станцию
+class RadioTestSt {
 
     @Test
-    public void RadioTestSetCurrentStation1() {
+    void getCurrentStation() {
         Radio radio = new Radio();
 
-        radio.setCurrentStation(10);
-
+        radio.setCurrentStation(11);
         int expected = 0;
         int actual = radio.getCurrentStation();
 
@@ -19,11 +18,10 @@ public class RadioTestSetCurrentStation {  //устанавливаем конк
     }
 
     @Test
-    public void RadioTestSetCurrentStation2() {
+    void getCurrentStation1() {
         Radio radio = new Radio();
 
         radio.setCurrentStation(-1);
-
         int expected = 0;
         int actual = radio.getCurrentStation();
 
@@ -31,15 +29,13 @@ public class RadioTestSetCurrentStation {  //устанавливаем конк
     }
 
     @Test
-    public void RadioTestSetCurrentStation3() {
+    void getCurrentStation2() {
         Radio radio = new Radio();
 
-        radio.setCurrentStation(3);
-
-        int expected = 3;
+        radio.setCurrentStation(5);
+        int expected = 5;
         int actual = radio.getCurrentStation();
 
         assertEquals(expected, actual);
     }
-
 }
